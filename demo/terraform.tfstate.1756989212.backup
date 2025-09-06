@@ -1,0 +1,176 @@
+{
+  "version": 4,
+  "terraform_version": "1.13.0",
+  "serial": 6,
+  "lineage": "cc4cebd7-852e-2820-3ba4-e1c86ac6d369",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "managed",
+      "type": "aws_s3_bucket",
+      "name": "sampleBucket",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acceleration_status": "",
+            "acl": null,
+            "arn": "arn:aws:s3:::my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "bucket": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "bucket_domain_name": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad.s3.amazonaws.com",
+            "bucket_prefix": "",
+            "bucket_region": "us-west-2",
+            "bucket_regional_domain_name": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad.s3.us-west-2.amazonaws.com",
+            "cors_rule": [],
+            "force_destroy": false,
+            "grant": [
+              {
+                "id": "74ee730c6394e4695a17122607917279bd17f0a3c164f0255c4a6bd48db19afa",
+                "permissions": [
+                  "FULL_CONTROL"
+                ],
+                "type": "CanonicalUser",
+                "uri": ""
+              }
+            ],
+            "hosted_zone_id": "Z3BJ6K6RIION7M",
+            "id": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "lifecycle_rule": [],
+            "logging": [],
+            "object_lock_configuration": [],
+            "object_lock_enabled": false,
+            "policy": "",
+            "region": "us-west-2",
+            "replication_configuration": [],
+            "request_payer": "BucketOwner",
+            "server_side_encryption_configuration": [
+              {
+                "rule": [
+                  {
+                    "apply_server_side_encryption_by_default": [
+                      {
+                        "kms_master_key_id": "",
+                        "sse_algorithm": "AES256"
+                      }
+                    ],
+                    "bucket_key_enabled": false
+                  }
+                ]
+              }
+            ],
+            "tags": {},
+            "tags_all": {},
+            "timeouts": null,
+            "versioning": [
+              {
+                "enabled": false,
+                "mfa_delete": false
+              }
+            ],
+            "website": [],
+            "website_domain": null,
+            "website_endpoint": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "920373017577",
+            "bucket": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "region": "us-west-2"
+          },
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "random_id.randomId"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "aws_s3_object",
+      "name": "bucket-data",
+      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "acl": null,
+            "arn": "arn:aws:s3:::my-sample-bucket-yashpatel-c12e7fa6ee7903ad/eHealthCard.pdf",
+            "bucket": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "bucket_key_enabled": false,
+            "cache_control": "",
+            "checksum_algorithm": null,
+            "checksum_crc32": "",
+            "checksum_crc32c": "",
+            "checksum_crc64nvme": "",
+            "checksum_sha1": "",
+            "checksum_sha256": "",
+            "content": null,
+            "content_base64": null,
+            "content_disposition": "",
+            "content_encoding": "",
+            "content_language": "",
+            "content_type": "application/octet-stream",
+            "etag": "846eebab63988c6cb5494656e8e0fa12",
+            "force_destroy": false,
+            "id": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad/eHealthCard.pdf",
+            "key": "eHealthCard.pdf",
+            "kms_key_id": null,
+            "metadata": {},
+            "object_lock_legal_hold_status": "",
+            "object_lock_mode": "",
+            "object_lock_retain_until_date": "",
+            "override_provider": [],
+            "region": "us-west-2",
+            "server_side_encryption": "AES256",
+            "source": "./TKWRKS1150_Yash Patel.pdf",
+            "source_hash": null,
+            "storage_class": "STANDARD",
+            "tags": {},
+            "tags_all": {},
+            "version_id": "",
+            "website_redirect": ""
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0,
+          "identity": {
+            "account_id": "920373017577",
+            "bucket": "my-sample-bucket-yashpatel-c12e7fa6ee7903ad",
+            "key": "eHealthCard.pdf",
+            "region": "us-west-2"
+          },
+          "private": "bnVsbA==",
+          "dependencies": [
+            "aws_s3_bucket.sampleBucket",
+            "random_id.randomId"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "random_id",
+      "name": "randomId",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "b64_std": "wS5/pu55A60=",
+            "b64_url": "wS5_pu55A60",
+            "byte_length": 8,
+            "dec": "13920203853190988717",
+            "hex": "c12e7fa6ee7903ad",
+            "id": "wS5_pu55A60",
+            "keepers": null,
+            "prefix": null
+          },
+          "sensitive_attributes": [],
+          "identity_schema_version": 0
+        }
+      ]
+    }
+  ],
+  "check_results": null
+}
