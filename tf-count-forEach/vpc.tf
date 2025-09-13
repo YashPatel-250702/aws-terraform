@@ -11,7 +11,7 @@ resource "aws_subnet" "subnets" {
   vpc_id     = aws_vpc.myVpc.id
   availability_zone = var.availability_zones[count.index]
   map_public_ip_on_launch = true
-  count      = 4
+  count      = 2
   tags = {
     Name = "Subnet-${count.index + 1}"
   }
